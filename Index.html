@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Dia Dos Namorados</title>
+
+    <style>
+        body{
+            background-color: rgb(255, 0, 170);
+        }
+
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 10px;
+            color: white;
+            margin-left: -50px;
+            
+        }
+        button::before {
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+        120deg, transparent, #d503ff, transparent
+        );
+        transform: translateX( -100%);
+        transition: 0.6s;
+        position: absolute;
+
+        }
+
+        button:hover {
+        background: transparent;
+        box-shadow: 0 0 20px 5px;
+        color: #ff02ea;
+
+            
+        }
+
+        #nao{
+        position: absolute;
+        height: 40px;
+        width: 60px;
+        background-color: rgb(255, 0, 0);
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 10px;
+
+        }
+        button::before {
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+         120deg, transparent, #ff00d4, transparent
+        );
+        transform: translateX( -100%);
+        transition: 0.6s;
+        position: absolute;
+
+        }
+
+        button:hover {
+            background: transparent;
+            box-shadow: 0 0 20px 5px;
+            color: #ff00ff;
+
+            
+        }
+
+        
+        
+        
+    </style>
+
+</head>
+<body>
+
+    <div class="painel">
+        <h1>Julia Cunha, ainda pretendo colocar um "Küster" no seu nome</h1>
+
+        <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt="">
+
+        <h2>Nos permite ter mais uma chance? </h2>
+        
+        <a href="Eii....html"><button id="sim"> SIM </button></a>
+        <button onmouseover="fuja()" id="nao"> NÃO </button>
+        
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+
+        }
+
+        function parabens(){
+       alert("Antes de prosseguir, coloquei uma fotos de uma antigo codigo teste que eu tinha feito para te mandar. Vai ter varias memórias nossas, espero que goste...")
+        }
+    </script>
+
+
+
+    
+</body>
+</html>
